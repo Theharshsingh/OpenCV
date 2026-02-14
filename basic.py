@@ -23,7 +23,12 @@ eroded=cv.erode(dilated, (3,3), iterations=1)
 cv.imshow('eroded', eroded)
 
 #resizing
+resized=cv.resize(img,(500,500), interpolation=cv.INTER_CUBIC) #area/linear/nearest/area/cubic(slowest)/lanczos4
+cv.imshow('resized', resized)
 
+#cropping
+cropped=img[50:200,200:400]
+cv.imshow('cropped', cropped)
 
 cv.waitKey(0)  #k capital
 
